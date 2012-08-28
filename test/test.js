@@ -30,12 +30,34 @@ assert.equal(here(/*
 */).unindent(), "foobar\nbaz\npiyo");
 
 assert.equal(here(/*
+	foobar
+		baz
+	piyo
+*/).unindent(), "foobar\n\tbaz\npiyo");
+
+assert.equal(here(/*
     foobar
     baz
     piyo
 */).unindent(), "foobar\nbaz\npiyo");
 
-assert.equal(here(), '');
+assert.equal(here(/*
+    foobar
+        baz
+    piyo
+*/).unindent(), "foobar\n    baz\npiyo");
+
+assert.equal(here(/* /\* *\/ */), "/* */");
+assert.equal(here(/* \\ */), "\\");
+
+assert.equal(here(''/* /\* *\/ */), "/\\* *\\/");
+assert.equal(here(''/* \\ */), "\\\\");
+
+assert.equal( ('Hello, ' + here(/* World */)), 'Hello, World');
+
+assert.equal(here(), ''); /* dummy */
+assert.equal(here(/* () */), '()'); /* dummy */
+
 
 
 
