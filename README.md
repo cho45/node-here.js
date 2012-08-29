@@ -76,7 +76,7 @@ here(/*
 */).unindent()
 ```
 
-is convert to following:
+is converted to following:
 
 ```
 foo
