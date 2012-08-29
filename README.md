@@ -47,10 +47,10 @@ If a here document starts with `''/*`, it is wysiwyg mode which does not transla
 ```
 here(''/*
   \foo\bar\baz
-*/); //=> '\\fooo\\bar\\baz'
+*/); //=> '\\foo\\bar\\baz'
 ```
 
-In this case, string `*/` can be apeared in here document.
+In this case, string `*/` can not be apeared in here document.
 
 ### Returning value
 
@@ -66,7 +66,7 @@ a.valueOf(); //=> 'foobar'
 
 ### Method unindent();
 
-Returning String object hav `unindent()` utility method which removes indent in a string.
+Returning String object have `unindent()` utility method which removes indent in a string.
 
 ```
 here(/*
