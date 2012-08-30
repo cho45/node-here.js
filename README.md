@@ -83,3 +83,8 @@ foo
   bar
 baz
 ```
+
+LICENSE
+=======
+
+MIT: http://cho45.github.com/mit-license
