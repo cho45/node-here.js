@@ -12,7 +12,7 @@ assert.equal(here(/*
 
 assert.equal(here(/* foobar */), "foobar");
 
-(function () {
+((() => {
 	assert.equal(here(/*
 		foobar
 		baz
@@ -20,7 +20,7 @@ assert.equal(here(/* foobar */), "foobar");
 	*/), "\t\tfoobar\n\t\tbaz\n\t\tpiyo\n");
 
 	assert.equal(here(/* foobar */), "foobar");
-})();
+}))();
 
 
 assert.equal(here(/*
